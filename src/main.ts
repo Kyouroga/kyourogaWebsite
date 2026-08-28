@@ -16,7 +16,7 @@ if (app) {
 		<div class="site-notice" role="status">This website is not finished yet.</div>
 		<header class="site-header">
 			<a class="brand" href="/" aria-label="Kyouroga home">
-				<img class="brand-mark" src="/src/assets/icons/logo/kyouroga.orglogo.png" alt="" />
+				<img class="brand-mark" src="/kyouroga-logo.png" alt="" />
 				<span class="brand-name">kyouroga</span>
 			</a>
 			<button class="mobile-menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
@@ -62,7 +62,7 @@ if (app) {
 		<aside class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
 			<div class="mobile-nav-header">
 				<a class="brand" href="/" aria-label="Kyouroga home">
-					<img class="brand-mark" src="/src/assets/icons/logo/kyouroga.orglogo.png" alt="" />
+					<img class="brand-mark" src="/kyouroga-logo.png" alt="" />
 					<span class="brand-name">kyouroga</span>
 				</a>
 				<button class="mobile-nav-close" type="button" aria-label="Close navigation"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
