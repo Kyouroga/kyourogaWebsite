@@ -71,8 +71,6 @@ if (app) {
 				<div class="mobile-nav-links mobile-nav-panel mobile-nav-main-panel">
 					<button class="mobile-nav-link" type="button" data-mobile-panel="projects" disabled>Projects <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
 					<button class="mobile-nav-link" type="button" data-mobile-panel="resources" disabled>Resources <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
-					<a class="mobile-nav-link" href="https://github.com/Kyouroga" target="_blank" rel="noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
-					<a class="mobile-nav-link" href="mailto:support@kyouroga.org" style="border-bottom: none;">Contact us <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
 				</div>
 				<div class="mobile-nav-links mobile-nav-panel" data-mobile-panel-view="projects" aria-hidden="true">
 					<div class="mobile-nav-subheader"><button class="mobile-nav-back" type="button" aria-label="Back to mobile navigation"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i> Back</button><a href="/projects/" data-disabled-nav aria-disabled="true">View all projects <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></div>
@@ -90,6 +88,10 @@ if (app) {
 					<a class="mobile-nav-link" href="/resource/#community" data-disabled-nav aria-disabled="true">Community <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
 					<a class="mobile-nav-link" href="/resource/#updates" data-disabled-nav aria-disabled="true" style="border-bottom: none;">Updates <i class="fa-solid fa-chevron-right" aria-hidden="true"></i></a>
 				</div>
+			</div>
+			<div class="mobile-nav-actions">
+				<a class="mobile-nav-action mobile-nav-action-secondary" href="https://github.com/Kyouroga" target="_blank" rel="noreferrer">GitHub <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+				<a class="mobile-nav-action mobile-nav-action-primary" href="mailto:support@kyouroga.org">Contact us</a>
 			</div>
 		</aside>
 
@@ -154,6 +156,11 @@ if (app) {
 	});
 
 	const setMobileMenu = (isOpen: boolean) => {
+		if (isOpen) {
+			window.scrollTo({ top: 0, behavior: 'smooth' });
+			if (mobileNavPanels) mobileNavPanels.scrollTop = 0;
+			if (mobileMenu) mobileMenu.scrollTop = 0;
+		}
 		mobileMenu?.classList.toggle('is-open', isOpen);
 		mobileMenuBackdrop?.classList.toggle('is-visible', isOpen);
 		mobileMenu?.setAttribute('aria-hidden', String(!isOpen));
@@ -180,6 +187,9 @@ if (app) {
 	mobileMenuToggle?.addEventListener('click', () => {
 		if (mobileNavResetTimer !== undefined) window.clearTimeout(mobileNavResetTimer);
 		mobileMenu?.classList.remove('is-closing');
+		window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
+		if (mobileNavPanels) mobileNavPanels.scrollTop = 0;
+		if (mobileMenu) mobileMenu.scrollTop = 0;
 		setMobileMenu(true);
 	});
 	mobileMenuClose?.addEventListener('click', closeMobileMenu);
