@@ -1,3 +1,3 @@
 export const siteConfig = {
-  name: 'Kyouroga Website',
+  name: 'Kyouroga',
 } as const;
