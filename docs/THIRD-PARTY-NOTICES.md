@@ -38,8 +38,3 @@ build this project:
 
 The complete dependency tree and resolved versions are recorded in
 `package-lock.json`. Transitive dependencies retain their own licenses.
-
-## External Services
-
-- GitHub: repository hosting and source control, https://github.com
-- Cloudflare Workers: hosting and deployment service, https://workers.cloudflare.com
