@@ -148,7 +148,7 @@ if (app) {
 					</div>
 				</nav>
 			</div>
-			<img class="site-footer-logo" src="/kyouroga-logo.svg" alt="" />
+			<img class="site-footer-logo" src="/kyouroga-logo-outline.svg" alt="" />
 			<div class="site-footer-bottom">
 				<span class="site-footer-copyright">© 2026 Kyouroga</span>
 				<div class="site-footer-actions">
